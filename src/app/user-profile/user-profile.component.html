@@ -1,50 +1,113 @@
+<div class="container">
+  <div class="row p-5">
+    <div class="col">
+    </div>
+  </div>
+</div>
+
+<!--Listado de clientes-->
 <div class="main-content">
-  <div class="container">
+  <div class="container-fluid">
       <div class="row">
-          <div class="col-sm-8">
+        <section id="actions" class="py-4 mb-4 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#agregarClienteModal"
+                >
+                  Agregar Cliente
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+          <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title">Crear nuevo Cliente</h4>
-                      <p class="card-category">Ingrese información del Usuario</p>
-                  </div>
                   <div class="card-body">
-                      <form>
-                        <div class="row">
-                          <div class="col-6 align-content">
-                            <label>Nombre &nbsp;</label>
-                            <input type="text" class="form-controller" name="name">
-                          </div>
-                          <div class="col-6">
-                            <label>Apellido &nbsp;</label>
-                            <input type="text" class="form-controller" name="name">
-                          </div>
-                        </div> 
-                        <div class="row">
-                          <div class="col-4 align-content">
-                            <label>Comuna&nbsp;</label>
-                            <input type="text" class="form-controller" name="name">
-                          </div>
-                          <div class="col-4">
-                            <label>Dirección &nbsp;</label>
-                            <input type="text" class="form-controller" name="name">
-                          </div>
-                          <div class="col-4">
-                            <label>Nro &nbsp;</label>
-                            <input type="text" class="form-controller" name="name">
-                          </div>
-                        </div>
-                        <div class="row p-2">
-                          <div class="col-6">
-                            <button class="btn-danger">Cancelar</button>
-                          </div>
-                          <div class="col-6">
-                            <button class="btn-success">Agregar</button>
-                          </div>
-                        </div>                              
-                      </form>
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Nombre
+                                  </th>
+                                  <th>
+                                      Descripción
+                                  </th>
+                                  <th>
+                                    Precio
+                                </th>
+                              </thead>
+                              <tbody >
+                
+                              </tbody>
+                          </table>
+                      </div>
                   </div>
               </div>
           </div>
       </div>
+  </div>
+</div>
+
+<!--Agregar Cliente Modal -->
+<div class="modal fade" id="agregarClienteModal">
+  <div class="modal-dialog modl-lg">
+    <div class="modal-content">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Crear nuevo Cliente</h4>
+          </div>
+          <div class="card-body">
+            <form #f="ngForm" (ngSubmit)="agregarCliente(f)">
+              <div class="row">
+                <div class="col-6 align-content">
+                  <label>Nombre &nbsp;</label>
+                  <input
+                    type="text"
+                    class="form-controller"
+                    name="name"
+                    ngModel
+                  />
+                </div>
+                <div class="col-6">
+                  <label>Apellido &nbsp;</label>
+                  <input type="text" class="form-controller" name="name" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4 align-content">
+                  <label>Comuna&nbsp;</label>
+                  <input type="text" class="form-controller" name="name" />
+                </div>
+                <div class="col-4">
+                  <label>Dirección &nbsp;</label>
+                  <input type="text" class="form-controller" name="name" />
+                </div>
+                <div class="col-4">
+                  <label>Nro &nbsp;</label>
+                  <input type="text" class="form-controller" name="name" />
+                </div>
+              </div>
+              <div class="row p-2">
+                <div class="col-6">
+                  <button class="btn-danger">Cancelar</button>
+                </div>
+                <div class="col-6">
+                  <button class="btn-success">Agregar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

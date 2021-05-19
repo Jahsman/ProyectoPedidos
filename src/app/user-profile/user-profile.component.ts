@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from 'app/clases/cliente.compontent';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,6 +11,10 @@ export class UserProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  agregarCliente(cliente: Cliente){
+  
   }
 
 }
