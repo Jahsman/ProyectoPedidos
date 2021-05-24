@@ -66,34 +66,62 @@
             <h4 class="card-title">Crear nuevo Cliente</h4>
           </div>
           <div class="card-body">
-            <form #f="ngForm" (ngSubmit)="agregarCliente(f)">
+            <form #f="ngForm" (ngSubmit)="agregarCliente(f)" novalidate>
               <div class="row">
                 <div class="col-6 align-content">
                   <label>Nombre &nbsp;</label>
                   <input
                     type="text"
                     class="form-controller"
-                    name="name"
-                    ngModel
+                    name="nombre"
+                    #nombre="ngModel"
+                    [(ngModel)]="cliente.nombre"
                   />
                 </div>
+                
                 <div class="col-6">
                   <label>Apellido &nbsp;</label>
-                  <input type="text" class="form-controller" name="name" />
+                  <input 
+                  type="text" 
+                  class="form-controller"
+                  name="apellido"
+                  #apellido="ngModel"
+                  [(ngModel)]="cliente.apellido"
+
+                  />
                 </div>
               </div>
               <div class="row">
                 <div class="col-4 align-content">
                   <label>Comuna&nbsp;</label>
-                  <input type="text" class="form-controller" name="name" />
+                  <input 
+                  type="text" 
+                  class="form-controller" 
+                  name="comuna"
+                  #comuna="ngModel"
+                  [(ngModel)]="cliente.comuna"
+                  />
                 </div>
                 <div class="col-4">
                   <label>Dirección &nbsp;</label>
-                  <input type="text" class="form-controller" name="name" />
+                  <input
+                   type="text" 
+                   class="form-controller" 
+                   name="direccion"
+                   #direccion="ngModel"
+                   [(ngModel)]="cliente.direccion"
+                   
+                   />
                 </div>
                 <div class="col-4">
                   <label>Nro &nbsp;</label>
-                  <input type="text" class="form-controller" name="name" />
+                  <input 
+                  type="number" 
+                  class="form-controller" 
+                  name="nro"
+                  #nro="ngModel"
+                  [(ngModel)]="cliente.nro"
+                  />
                 </div>
               </div>
               <div class="row p-2">
@@ -101,7 +129,7 @@
                   <button class="btn-danger">Cancelar</button>
                 </div>
                 <div class="col-6">
-                  <button class="btn-success">Agregar</button>
+                  <button class="btn-success" type="submit">Agregar</button>
                 </div>
               </div>
             </form>
