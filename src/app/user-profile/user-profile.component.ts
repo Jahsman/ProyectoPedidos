@@ -28,9 +28,9 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
   
     this.listadoClientes = [
-     
-    ]
       
+    ]
+       
       
     
 
@@ -38,7 +38,7 @@ export class UserProfileComponent implements OnInit {
   
   agregarCliente(f:NgForm){
   console.log(this.listadoClientes);
-
+  console.warn();
   this.listadoClientes.push(f.value);
   console.log(this.listadoClientes)
   }
